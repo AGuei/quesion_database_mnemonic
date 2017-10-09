@@ -21,19 +21,19 @@ function createDataArray(){
     let choiceArray = exec_qa[3].match(choiceRe);
     let len = choiceArray.length;
     for(let i = 0 ; i < len ; i++){
-      let cArrayLen = choiceArray[i].length;
-      data.choices[i] = choiceArray[i].substring(2,cArrayLen);
+      let choiceStringLen = choiceArray[i].length;
+      data.choices[i] = choiceArray[i].substring(2,choiceStringLen);
       if(exec_qa[1].length === 1){
         data.type = 1;
         if(choiceArray[i][0] === exec_qa[1]){
-          data.cAnswer.push(choiceArray[i].substring(2,cArrayLen));
+          data.cAnswer.push(choiceArray[i].substring(2,choiceStringLen));
         }
       }
       else if(exec_qa[1].length > 1){
         data.type = 2;
         for(let j=0; j < exec_qa[1].length;j++){
           if(exec_qa[1][j] === choiceArray[i][0]){
-            data.cAnswer.push(choiceArray[i].substring(2,cArrayLen));
+            data.cAnswer.push(choiceArray[i].substring(2,choiceStringLen));
             j += 1;
           }
         }
