@@ -1,3 +1,4 @@
 body{background-color:66AA66;}
-input{font-size:25px;}
 p{text-align: center;font-size:30px;}
+input[type="button"]{font-size:20px;}
+input[type="text"]{width:300px;height:50px;font-size:30px;}
