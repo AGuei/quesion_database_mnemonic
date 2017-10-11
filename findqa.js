@@ -45,18 +45,29 @@ function createDataArray(){
 }
 
 function makeTable(data) {
-  function rdm() {
-    return (Math.random() > 0.5 ? 1 : 0);
+  function randomArray(array) {
+    let currentIndex = array.length, randomIndex, temporaryValue;
+
+    while(currentIndex !== 0){
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+
+    return array;
   }
   if(!data){
     return;
   }
-  data.sort(rdm);
+  data = randomArray(data);
   let table = document.createElement('table');
   let tbody = document.createElement('tbody');
   let ol = document.createElement('ol');
   for (let j = 0, len = data.length; j < len; j++) {
-    data[j].choices.sort(rdm);
+    data[j].choices = randomArray(data[j].choices);
     correctArray.push(data[j].cAnswer);
     let cAnsLen = data[j].cAnswer.length;
     let li = document.createElement('li');
