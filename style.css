@@ -33,3 +33,30 @@ input[type="text"]{width:300px;height:50px;font-size:30px;}
     background: -moz-linear-gradient(top, #113fd8, #113fd8);
     background: linear-gradient(to bottom, #113fd8, #113fd8);
 }
+/* 單選框 */
+ .abgne-menu-20140101-1 input[type="radio"] {
+    display: none;
+}
+.abgne-menu-20140101-1 input[type="radio"] + label {
+    display: inline-block;
+    background-color: #ccc;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+.abgne-menu-20140101-1 input[type="radio"]:checked + label {
+    background-color: #f00;
+    color: #fff;
+}
+/* 多選框 */
+ .abgne-menu-20140101-2 input[type="checkbox"] {
+    display: none;
+}
+.abgne-menu-20140101-2 input[type="checkbox"] + label {
+    display: inline-block;
+    background-color: #ccc;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+.abgne-menu-20140101-2 input[type="checkbox"]:checked + label {
+    background-color: #f3d42e;
+}
