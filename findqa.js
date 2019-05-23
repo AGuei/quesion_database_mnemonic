@@ -6,7 +6,7 @@ function createDataArray(){
   }
   let delre = /^P\..+\n/gm;  
   allqa = allqa.replace(delre,'');  
-  let re = /^[0-9]{1,3}\. ([A-E]{1,3})((?:(?!^A).+\n)*)((^[A-E]\.(.+\n?))+)/gm;
+  let re = /^[0-9]{1,3}\.\s{0,3}([A-E]{1,3})((?:(?!^A).+\n)*)((^[A-E]\.(.+\n?))+)/gm;
   let choiceRe = /[A-E]. ((?![BCDE]\. ).)+/gm;
   let exec_qa;
   let dataArray = [];
