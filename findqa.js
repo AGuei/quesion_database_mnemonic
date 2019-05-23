@@ -48,7 +48,7 @@ function createDataArray(){
 
 function makeTable(data) {
   function rdm() {
-    return (Math.random() > 0.5 ? 1 : 0);
+    return (Math.random() > 0.5 ? 1 : -1);
   }
   if(!data){
     return;
